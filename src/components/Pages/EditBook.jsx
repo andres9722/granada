@@ -20,7 +20,11 @@ const EditBook = ({
   return (
     <div className='l-container'>
       <form className='form' onSubmit={e => handleOnUpdateBook(e)}>
-        <img src={images[0]} alt='Book' className='book__img' />
+        <img
+          src={images[match.params.ID - 1]}
+          alt='Book'
+          className='book__img'
+        />
         <input
           type='hidden'
           value={books[match.params.ID - 1].ID}
