@@ -1,0 +1,66 @@
+@import "../../shared/variables.scss";
+@import "../../shared/mixins.scss";
+
+.book-item {
+  text-align: center;
+  padding: 0 32px;
+  max-width: 80%;
+  margin: 0 auto;
+  
+  @include from($medium) {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__figure {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover {
+      .book-item__description {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+  }
+
+  &__description {
+    display: none;
+
+    @include from($large) {
+      display: flex;
+      position: absolute;
+      align-items: center;
+      top: 0;
+      left: 0;
+      height: 100%;
+      color: color(white);
+      background: rgba(color(black), .8);
+      opacity: 0;
+      transition: opacity .5s ease;
+      padding: 0 8px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    color: color(font-color);
+    text-shadow: .8px 0 .5px color(black);
+  }
+  
+  &__date {
+    color: color(font-color);
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../../index.scss";
+
+.success {
+  margin: 25px auto;
+  padding: 16px;
+  border: 2px solid color(green);
+  width: 300px;
+  color: color(green);
+  text-transform: uppercase;
+  text-align: center;
+
+  &__message {
+
+  }
+}

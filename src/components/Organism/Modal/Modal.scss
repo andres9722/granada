@@ -1,0 +1,79 @@
+@import "../../shared/variables.scss";
+@import "../../shared/typography.scss";
+@import "../../shared/mixins.scss";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(color(black), .8);
+  z-index: 10;
+
+  &__content {
+    width: 80%;
+    height: 150px;
+    margin: 0 auto;
+    background: white;
+    transform: translateY(40vh);
+    position: relative;
+    padding: 16px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @include from($large) {
+      width: 40%;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: color(primary-dark);
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__submit, &__cancel {
+    border: 0;
+    background: color(white);
+    font-family: $font-text;
+    color: color(green);
+    padding: 0 8px;
+    text-transform: uppercase;
+    margin-right: 8px;
+    outline: none;
+    margin-top: 16px;
+    font-size: 17px;
+    cursor: pointer;
+  }
+
+  &__cancel {
+    color: color(red);
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__buttons {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+}

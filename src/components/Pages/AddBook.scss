@@ -1,0 +1,52 @@
+@import "../shared/variables.scss";
+@import "../shared/mixins.scss";
+@import "../shared/typography.scss";
+
+.form {
+  padding: 8px;
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+
+  @include from($medium) {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  @include from($medium) {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .preview {
+    max-width: 200px;
+    max-height: 300px;
+    margin: 0 auto;
+  }
+
+  &__submit {
+    border: 2px solid color(font-color);
+    border-radius: 20px;
+    padding: 8px 48px;
+    background: color(primary-dark);
+    color: color(white);
+    font-family: $font-text;
+    font-size: 17px;
+    cursor: pointer;
+    outline: none;
+
+    @include from($large) {
+      margin-left: auto;
+    }
+  }
+
+  &__filename {
+    color: color(primary-dark);
+    margin-top: 4px;
+
+    &::before {
+      content: '=> ';
+      color: color(black);
+    }
+  }
+}

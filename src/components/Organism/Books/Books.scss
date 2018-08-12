@@ -1,0 +1,21 @@
+@import "../../shared/variables.scss";
+@import "../../shared/mixins.scss";
+
+.books {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 32px;
+
+  @include from($medium) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 60px;
+  }
+  
+  @include from($large) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 16px;
+  }
+}
