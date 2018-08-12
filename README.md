@@ -1,6 +1,6 @@
 ## Granada
 La prueba fue desarrollada en React, se utilizo redux para un mejor control de estado y SCSS como preprocesador de css.
-
+## 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
