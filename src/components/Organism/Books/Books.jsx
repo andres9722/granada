@@ -11,7 +11,7 @@ const Books = ({ books, images, loading }) => (
       {books &&
         books.map(book => (
           <Link key={book.Title} to={`/book/${book.ID}`}>
-            <Book book={book} Image={images[book.ID]} />
+            <Book book={book} Image={images[book.ID - 1]} />
           </Link>
         ))}
     </ul>
