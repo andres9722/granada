@@ -4,9 +4,7 @@ import './SuccessMessage.scss'
 
 const SuccessMessage = props => (
   <div className='success'>
-    <span
-      className='success__message'
-    >
+    <span className='success__message'>
       {props.text}
     </span>
   </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const SubmitForm = props => (
   <div className={props.classes}>
@@ -10,5 +11,12 @@ const SubmitForm = props => (
     />
   </div>
 )
+
+SubmitForm.propTypes = {
+  classes: PropTypes.string,
+  className: PropTypes.string,
+  value: PropTypes.string,
+  disabled: PropTypes.bool
+}
 
 export default SubmitForm

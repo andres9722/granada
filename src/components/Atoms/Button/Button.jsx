@@ -13,8 +13,10 @@ const Button = props => (
 )
 
 Button.propTypes = {
+  class: PropTypes.string,
   value: PropTypes.string,
-  click: PropTypes.func
+  id: PropTypes.string,
+  onClick: PropTypes.func
 }
 
 export default Button

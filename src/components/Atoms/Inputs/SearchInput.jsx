@@ -16,9 +16,8 @@ const SearchInput = props => (
 )
 
 SearchInput.propTypes = {
-  classes: PropTypes.string,
+  className: PropTypes.string,
   label: PropTypes.string,
-  type: PropTypes.string,
   name: PropTypes.string,
   placeholder: PropTypes.string,
   required: PropTypes.bool,

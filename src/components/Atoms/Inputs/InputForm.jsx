@@ -27,6 +27,7 @@ InputForm.propTypes = {
   classes: PropTypes.string,
   label: PropTypes.string,
   minLength: PropTypes.number,
+  className: PropTypes.string,
   id: PropTypes.string,
   type: PropTypes.string,
   name: PropTypes.string,
