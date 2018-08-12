@@ -148,7 +148,7 @@ export const removeBook = (e, book) => {
       setTimeout(() => dispatch(setError(false)), 3000)
     } finally {
       dispatch(showModal())
-      window.location.href = `/`
+      window.location.href = `/granada`
     }
   }
 }
