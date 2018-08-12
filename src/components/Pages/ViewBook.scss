@@ -5,7 +5,7 @@
 .book {
   display: flex;
   flex-direction: column;
-  padding: 16px 8px 0;
+  padding: 8px;
   padding-top: 32px;
 
   &__content {
@@ -33,19 +33,18 @@
   }
 
   &__img {
-    height: 300px;
     width: 200px;
     margin: 0 auto;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
   }
 
   &__title {
     color: color(primary-dark);
     width: 100px;
+    text-align: right;
     
     @include from($large) {
       width: 200px;
-      text-align: right;
     }
   }
 

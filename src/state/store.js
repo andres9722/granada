@@ -22,6 +22,8 @@ export default () => {
     persistedReducer,
     composeWithDevTools(applyMiddleware(thunk))
   )
+
   let persistor = persistStore(store)
+
   return { store, persistor }
 }

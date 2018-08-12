@@ -4,7 +4,6 @@
 
 .header {
   background-color: color(primary-dark);
-  height: 80px;
 
   &__container {
     display: flex;
@@ -43,10 +42,6 @@
           }
         }
       }
-
-      &__text {
-        display: none;
-      }
     }
 
     .search, .add {
@@ -84,7 +79,7 @@
         z-index: 10;
         top: 50%;
         transform: translateY(-50%);
-        right: 110%;
+        right: 100%;
         max-width: 0;
         width: 0;
         opacity: 0;
@@ -96,7 +91,7 @@
           opacity: 1;
         }
 
-        @include from($medium) {
+        @include from($large) {
           transform: translateY(0);
           opacity: 1;
           right: 0;

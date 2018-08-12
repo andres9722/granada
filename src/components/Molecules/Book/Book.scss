@@ -2,8 +2,6 @@
 @import "../../shared/mixins.scss";
 
 .book-item {
-  text-align: center;
-  padding: 0 32px;
   max-width: 80%;
   margin: 0 auto;
   
@@ -30,10 +28,6 @@
         opacity: 1;
       }
     }
-  }
-
-  &__img {
-    margin: 0 auto;
   }
 
   &__description {

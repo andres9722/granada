@@ -29,7 +29,7 @@ const EditBook = ({
         />
         <InputForm
           classes='form__content'
-          label='Título: '
+          label='*Título: '
           type='text'
           default={books[match.params.ID - 1].Title}
           required
@@ -39,7 +39,7 @@ const EditBook = ({
 
         <InputForm
           classes='form__content'
-          label='Fecha: '
+          label='*Fecha: '
           type='date'
           default={books[match.params.ID - 1].PublishDate.substring(0, 10)}
           required
@@ -59,7 +59,7 @@ const EditBook = ({
 
         <InputForm
           classes='form__content'
-          label='Descripción: '
+          label='*Descripción: '
           type='text'
           default={books[match.params.ID - 1].Description}
           required
@@ -79,7 +79,7 @@ const EditBook = ({
         <SubmitForm
           classes='form__content'
           className='form__submit'
-          value='Actualizar'
+          value='Guardar'
         />
       </form>
       {loading && <Loader />}

@@ -56,11 +56,9 @@ export const loadImages = () => {
     try {
       let local = JSON.parse(window.localStorage.getItem('persist:root'))
       let books = JSON.parse(local.books)
-      console.log(books)
 
       await asyncForEach(books, async book => {
         let res = await axios.get(`${IMAGE_URL}=${book.ID}`)
-        console.log(res)
         let image = await res.request.responseURL
         return dispatch({
           type: LOAD_IMAGES,

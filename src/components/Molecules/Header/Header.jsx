@@ -27,7 +27,6 @@ const Header = ({ handleOnSearch, handleMobileSearch, mobileSearch }) => (
             alt='Logo'
           />
         </Link>
-        <span className='logo__text'>granada</span>
       </div>
       <div className='search'>
         <img

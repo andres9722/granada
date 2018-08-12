@@ -20,29 +20,29 @@ const ViewBook = ({
       <img src={images[match.params.ID - 1]} alt='Book' className='book__img' />
       <div className='book__content'>
         <span className='book__title'> *Título: </span>
-        <span className='book__description'>
+        <p className='book__description'>
           {books[match.params.ID - 1].Title}
-        </span>
+        </p>
       </div>
       <div className='book__content--row'>
         <div className='book__content'>
           <span className='book__title'> *Fecha: </span>
-          <span className='book__description'>
+          <p className='book__description'>
             {books[match.params.ID - 1].PublishDate.substring(0, 10)}{' '}
-          </span>
+          </p>
         </div>
         <div className='book__content'>
           <span className='book__title'> N° páginas: </span>
-          <span className='book__description'>
+          <p className='book__description'>
             {books[match.params.ID - 1].PageCount}
-          </span>
+          </p>
         </div>
       </div>
       <div className='book__content'>
         <span className='book__title'> *Descripción: </span>
-        <span className='book__description'>
+        <p className='book__description'>
           {books[match.params.ID - 1].Description}
-        </span>
+        </p>
       </div>
       <div className='book__content'>
         <span className='book__title'> Extracto: </span>

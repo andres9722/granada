@@ -55,7 +55,7 @@ class AddBook extends Component {
           </div>
           <InputForm
             classes='form__content'
-            label='Título: '
+            label='*Título: '
             type='text'
             placeholder='Título'
             required
@@ -64,7 +64,7 @@ class AddBook extends Component {
           />
           <InputForm
             classes='form__content'
-            label='Fecha: '
+            label='*Fecha: '
             type='date'
             placeholder='Fecha'
             required
@@ -82,7 +82,7 @@ class AddBook extends Component {
           />
           <InputForm
             classes='form__content'
-            label='Descripción: '
+            label='*Descripción: '
             type='text'
             placeholder='Descripción'
             required
