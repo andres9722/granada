@@ -9,9 +9,9 @@ const Books = ({ books, images, loading }) => (
   <Fragment>
     <ul className='books'>
       {books &&
-        books.map((book, i) => (
+        books.map(book => (
           <Link key={book.Title} to={`/book/${book.ID}`}>
-            <Book book={book} Image={images[i]} />
+            <Book book={book} Image={images[book.ID]} />
           </Link>
         ))}
     </ul>
