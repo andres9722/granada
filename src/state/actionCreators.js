@@ -52,23 +52,29 @@ async function asyncForEach (array, callback) {
 }
 
 export const loadImages = () => {
-  return async dispatch => {
-    try {
-      let local = JSON.parse(window.localStorage.getItem('persist:root'))
-      let books = JSON.parse(local.books)
+  return dispatch => {
+    let local = JSON.parse(window.localStorage.getItem('persist:root'))
+    let books = JSON.parse(local.books)
 
-      await asyncForEach(books, async book => {
-        let res = await axios.get(`${IMAGE_URL}=${book.ID}`)
-        let image = await res.request.responseURL
-        return dispatch({
-          type: LOAD_IMAGES,
-          image
+    asyncForEach(books, async book => {
+      await axios
+        .get(`${IMAGE_URL}=${book.ID}`)
+        .then(response => {
+          let image = response.request.responseURL
+          return dispatch({
+            type: LOAD_IMAGES,
+            image
+          })
         })
-      })
-    } catch (error) {
-      dispatch(setError(true))
-      setTimeout(() => dispatch(setError(false)), 3000)
-    }
+        .catch(() => {
+          let image =
+            'https://static.hsfiles.com/es/wp-content/gallery/libro-recetas-familia/libro-recetas-01.jpg'
+          return dispatch({
+            type: LOAD_IMAGES,
+            image
+          })
+        })
+    })
   }
 }
 
